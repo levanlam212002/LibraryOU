@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" stylesheets="@onStyle.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.library.ThongKeController">
+   <center>
+      <VBox prefHeight="648.0" prefWidth="900.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="48.0" prefWidth="879.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#btnQuayLai" prefHeight="28.0" prefWidth="120.0" text="Quay lại" />
+                  <VBox prefHeight="55.0" prefWidth="63.0" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Title" text="THỐNG KÊ MƯỢN TRẢ SÁCH" textAlignment="CENTER" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Quý:" />
+                  <ComboBox fx:id="cbbQuy" prefHeight="28.0" prefWidth="219.0" />
+                  <VBox prefHeight="28.0" prefWidth="8.0" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Năm:" />
+                  <TextField fx:id="txtNam" prefHeight="28.0" prefWidth="147.0" promptText="Nhập năm" />
+                  <VBox prefHeight="28.0" prefWidth="0.0" />
+                  <Button mnemonicParsing="false" onAction="#btnLapBaoCao" prefHeight="28.0" prefWidth="250.0" text="Lập báo cáo" />
+               </children>
+            </HBox>
+            <HBox prefHeight="8.0" prefWidth="879.0">
+               <children>
+                  <VBox prefHeight="19.0" prefWidth="103.0" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Thống kê mượn sách" wrappingWidth="162.90216064453125" />
+                  <VBox prefHeight="19.0" prefWidth="262.0" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Thống kê trả sách" />
+               </children>
+            </HBox>
+            <HBox prefHeight="519.0" prefWidth="879.0">
+               <children>
+                  <TableView fx:id="tbMuon" prefHeight="275.0" prefWidth="427.0" />
+                  <TableView fx:id="tbTra" prefHeight="275.0" prefWidth="438.0" />
+               </children>
+            </HBox>
+            <Button mnemonicParsing="false" onAction="#btnXemTK" prefHeight="28.0" prefWidth="297.0" text="Xem thống kê trả trễ và đặt online" />
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

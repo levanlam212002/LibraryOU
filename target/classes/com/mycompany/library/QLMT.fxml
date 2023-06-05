@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="685.0" prefWidth="950.0" stylesheets="@onStyle.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.library.QLMTController">
+   <center>
+      <VBox prefHeight="686.0" prefWidth="536.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Title" text="QUẢN LÝ MƯỢN TRẢ SÁCH" />
+            <TableView fx:id="tbCard" onMouseClicked="#mouseClicked" prefHeight="530.0" prefWidth="239.0" />
+            <HBox prefHeight="52.0" prefWidth="554.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#btnBorrowed" prefHeight="28.0" prefWidth="123.0" text="Mượn sách" />
+                  <Button mnemonicParsing="false" onAction="#btnTraSach" prefHeight="28.0" prefWidth="129.0" text="Trả sách" />
+                  <Button mnemonicParsing="false" onAction="#btnNhanSach" prefHeight="28.0" prefWidth="165.0" text="Nhận sách đã đặt" />
+                  <Button mnemonicParsing="false" onAction="#btnReload" prefHeight="28.0" prefWidth="91.0" text="Tải lại" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+   <left>
+      <VBox prefHeight="686.0" prefWidth="422.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="7.0" prefWidth="355.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#btnQuayLai" prefHeight="28.0" prefWidth="108.0" text="Quay lại" />
+               </children>
+            </HBox>
+            <HBox prefHeight="50.0" prefWidth="306.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mã độc giả:" wrappingWidth="92.56573486328125" />
+                  <TextField fx:id="txtReader" prefHeight="28.0" prefWidth="252.0" />
+               </children>
+            </HBox>
+            <HBox layoutX="20.0" layoutY="20.0" prefHeight="50.0" prefWidth="306.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nhận sách:" wrappingWidth="92.56573486328125" />
+                  <RadioButton fx:id="radDaNhan" mnemonicParsing="false" onAction="#radNhan" text="Đã nhận">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="nhan" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="radChuaNhan" mnemonicParsing="false" onAction="#radChuaNhan" text="Chưa nhận" toggleGroup="$nhan" />
+               </children>
+            </HBox>
+            <HBox prefHeight="50.0" prefWidth="306.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ngày hẹn trả:" />
+                  <DatePicker fx:id="dpApp" prefHeight="28.0" prefWidth="254.0" />
+               </children>
+            </HBox>
+            <HBox layoutX="20.0" layoutY="257.0" prefHeight="50.0" prefWidth="306.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Trả sách:" wrappingWidth="92.56573486328125" />
+                  <RadioButton fx:id="radDaTra" mnemonicParsing="false" onAction="#radTra" text="Đã trả">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="tra" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="radChuaTra" mnemonicParsing="false" onAction="#radChuaTra" text="Chưa Trả" toggleGroup="$tra" />
+               </children>
+            </HBox>
+            <HBox layoutX="20.0" layoutY="325.0" prefHeight="50.0" prefWidth="306.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ngày Trả:" wrappingWidth="91.2762451171875" />
+                  <DatePicker fx:id="dpPay" prefHeight="28.0" prefWidth="254.0" />
+               </children>
+            </HBox>
+            <VBox prefHeight="25.0" prefWidth="306.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Thông tin sách mượn" wrappingWidth="141.14501953125" />
+               </children>
+            </VBox>
+            <HBox prefHeight="293.0" prefWidth="355.0">
+               <children>
+                  <VBox prefHeight="198.0" prefWidth="171.0">
+                     <children>
+                        <ListView fx:id="llvBook" prefHeight="375.0" prefWidth="131.0" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="198.0" prefWidth="29.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#btnRight" text="&gt;" />
+                        <Button mnemonicParsing="false" onAction="#btnLeft" text="&lt;" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="198.0" prefWidth="158.0">
+                     <children>
+                        <ListView fx:id="rlvBook" prefHeight="374.0" prefWidth="118.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </left>
+</BorderPane>

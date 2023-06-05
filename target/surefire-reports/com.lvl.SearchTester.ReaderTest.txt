@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.lvl.SearchTester.ReaderTest
+-------------------------------------------------------------------------------
+Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.848 s - in com.lvl.SearchTester.ReaderTest

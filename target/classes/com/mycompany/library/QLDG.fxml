@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="900.0" stylesheets="@onStyle.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.library.QLDGController">
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#btnQuayLai" prefHeight="28.0" prefWidth="124.0" text="Quay lại" />
+                  <VBox prefHeight="37.0" prefWidth="135.0" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Title" text="QUẢN LÝ ĐỘC GIẢ" wrappingWidth="276.298828125" />
+               </children>
+            </HBox>
+            <TableView fx:id="tbDG" onMouseClicked="#mouseClicked" prefHeight="214.0" prefWidth="879.0" />
+            <HBox prefHeight="32.0" prefWidth="879.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#btnThem" prefHeight="28.0" prefWidth="100.0" text="Thêm" />
+                  <Button mnemonicParsing="false" onAction="#btnSua" prefHeight="28.0" prefWidth="104.0" text="Sửa" />
+                  <Button mnemonicParsing="false" onAction="#btnXoa" prefHeight="28.0" prefWidth="107.0" text="Xóa" />
+                  <Button layoutX="264.0" layoutY="20.0" mnemonicParsing="false" onAction="#btnThemTaiKhoan" prefHeight="28.0" prefWidth="119.0" text="Thêm tài khoản" />
+                  <TextField fx:id="txtObject" prefHeight="28.0" prefWidth="203.0" promptText="Nhập loại đối tượng" />
+                  <Button mnemonicParsing="false" onAction="#btnThemDoiTuong" prefHeight="28.0" prefWidth="134.0" text="Thêm đối tượng" />
+               </children>
+            </HBox>
+            <HBox prefHeight="278.0" prefWidth="879.0">
+               <children>
+                  <VBox prefHeight="79.0" prefWidth="485.0">
+                     <children>
+                        <HBox prefHeight="34.0" prefWidth="406.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tên Độc giả:" wrappingWidth="143.83910369873047" />
+                              <TextField fx:id="txtName" prefHeight="28.0" prefWidth="235.0" promptText="Nhập tên độc giả" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="20.0" layoutY="20.0" prefHeight="17.0" prefWidth="406.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Giới tính:" wrappingWidth="143.83910369873047" />
+                              <RadioButton fx:id="radNam" mnemonicParsing="false" text="Nam">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="sex" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton fx:id="radNu" mnemonicParsing="false" text="Nữ" toggleGroup="$sex" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="20.0" layoutY="80.0" prefHeight="23.0" prefWidth="406.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ngày sinh:" wrappingWidth="143.83910369873047" />
+                              <DatePicker fx:id="dpBirthday" prefHeight="28.0" prefWidth="213.0" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="20.0" layoutY="139.0" prefHeight="8.0" prefWidth="406.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Email:" wrappingWidth="143.83910369873047" />
+                              <TextField fx:id="txtEmail" prefHeight="28.0" prefWidth="235.0" promptText=" Nhập email trường" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="20.0" layoutY="198.0" prefHeight="16.0" prefWidth="406.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Địa chỉ:" wrappingWidth="143.83910369873047" />
+                              <TextField fx:id="txtAddress" prefHeight="28.0" prefWidth="235.0" promptText="Nhập địa chỉ hiện tại" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox layoutX="20.0" layoutY="20.0" prefHeight="79.0" prefWidth="485.0">
+                     <children>
+                        <HBox prefHeight="34.0" prefWidth="406.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ngày mở thẻ:" wrappingWidth="143.83910369873047" />
+                              <DatePicker fx:id="dpStart" prefHeight="28.0" prefWidth="216.0" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="20.0" layoutY="20.0" prefHeight="17.0" prefWidth="406.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ngày hết hạn:" wrappingWidth="143.83910369873047" />
+                              <DatePicker fx:id="dpEnd" prefHeight="28.0" prefWidth="247.0" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="20.0" layoutY="80.0" prefHeight="23.0" prefWidth="406.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Bộ phận:" wrappingWidth="143.83910369873047" />
+                              <TextField fx:id="txtPart" prefHeight="28.0" prefWidth="235.0" promptText="Nhập tên khoa" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="20.0" layoutY="139.0" prefHeight="8.0" prefWidth="406.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Đối tượng:" wrappingWidth="143.83910369873047" />
+                              <ComboBox fx:id="cbbObject" prefHeight="28.0" prefWidth="230.0" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="20.0" layoutY="198.0" prefHeight="16.0" prefWidth="406.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Số điện thoại: " wrappingWidth="143.83910369873047" />
+                              <TextField fx:id="txtPhone" prefHeight="28.0" prefWidth="235.0" promptText="Nhập số điện thoại" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

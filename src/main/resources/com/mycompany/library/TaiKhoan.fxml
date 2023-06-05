@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" stylesheets="@onStyle.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.library.TaiKhoanController">
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="0.0" prefWidth="579.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#btnQuayLai" prefHeight="28.0" prefWidth="114.0" text="Quay lại" />
+               </children>
+            </HBox>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Title" text="THÊM TÀI KHOẢN" />
+            <HBox layoutX="20.0" layoutY="209.0" prefHeight="36.0" prefWidth="579.0">
+               <children>
+                  <VBox prefHeight="28.0" prefWidth="17.0" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tên đăng nhập:" />
+                  <VBox prefHeight="28.0" prefWidth="24.0" />
+                  <TextField fx:id="txtUserName" prefHeight="28.0" prefWidth="291.0" promptText="Nhập tên đăng nhập" />
+               </children>
+            </HBox>
+            <HBox layoutX="20.0" layoutY="239.0" prefHeight="36.0" prefWidth="579.0">
+               <children>
+                  <VBox prefHeight="28.0" prefWidth="4.0" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mật khẩu:" />
+                  <VBox prefHeight="28.0" prefWidth="64.0" />
+                  <PasswordField fx:id="txtPass" prefHeight="28.0" prefWidth="290.0" promptText="Nhập mật khẩu" />
+               </children>
+            </HBox>
+            <HBox layoutX="20.0" layoutY="188.0" prefHeight="36.0" prefWidth="600.0">
+               <children>
+                  <VBox prefHeight="28.0" prefWidth="6.0" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Xác nhận lại mật khẩu:" />
+                  <PasswordField fx:id="txtPassAgain" prefHeight="28.0" prefWidth="289.0" promptText="Nhập xác nhận mật khẩu" />
+               </children>
+            </HBox>
+            <HBox layoutX="20.0" layoutY="268.0" prefHeight="36.0" prefWidth="579.0">
+               <children>
+                  <VBox prefHeight="19.0" prefWidth="0.0" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Loại tài khoản:" />
+                  <VBox prefHeight="19.0" prefWidth="27.0" />
+                  <RadioButton fx:id="radDocGia" mnemonicParsing="false" onAction="#radDocGia" text="Độc giả">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="choose" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <VBox prefHeight="19.0" prefWidth="30.0" />
+                  <RadioButton fx:id="radThuThu" mnemonicParsing="false" onAction="#radThuThu" text="Thủ thư" toggleGroup="$choose" />
+               </children>
+            </HBox>
+            <HBox prefHeight="36.0" prefWidth="579.0">
+               <children>
+                  <VBox prefHeight="28.0" prefWidth="0.0" />
+                  <Label fx:id="lbHienThi" text="Mã độc giả:" />
+                  <VBox prefHeight="18.0" prefWidth="0.0" />
+                  <Label fx:id="lbId" layoutX="61.0" layoutY="20.0" text="1" />
+               </children>
+            </HBox>
+            <HBox layoutX="20.0" layoutY="299.0" prefHeight="36.0" prefWidth="579.0">
+               <children>
+                  <VBox prefHeight="28.0" prefWidth="0.0" />
+                  <VBox prefHeight="28.0" prefWidth="150.0" />
+                  <Button mnemonicParsing="false" onAction="#btnTaoTaiKhoan" prefHeight="28.0" prefWidth="129.0" text="Tạo tài khoản" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

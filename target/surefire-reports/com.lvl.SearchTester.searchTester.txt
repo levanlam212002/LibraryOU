@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: com.lvl.SearchTester.searchTester
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.651 s <<< FAILURE! - in com.lvl.SearchTester.searchTester
+testSearchName  Time elapsed: 0.039 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <1> but was: <0>
+	at com.mycompany.library/com.lvl.SearchTester.searchTester.testSearchName(searchTester.java:46)
+
+testSearchAuthor  Time elapsed: 0.005 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <2> but was: <1>
+	at com.mycompany.library/com.lvl.SearchTester.searchTester.testSearchAuthor(searchTester.java:60)
+

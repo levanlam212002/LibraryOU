@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="420.0" prefWidth="900.0" stylesheets="@onStyle.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.library.ThongKeThemController">
+   <center>
+      <VBox prefHeight="648.0" prefWidth="900.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#btnQuayLai" prefHeight="28.0" prefWidth="120.0" text="Quay lại" />
+                  <VBox prefHeight="55.0" prefWidth="63.0" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Title" text="THỐNG KÊ MƯỢN TRẢ SÁCH" textAlignment="CENTER" />
+               </children>
+            </HBox>
+            <HBox prefHeight="2.0" prefWidth="879.0">
+               <children>
+                  <VBox prefHeight="18.0" prefWidth="118.0" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Thống kê trả trễ" />
+                  <VBox prefHeight="18.0" prefWidth="298.0" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Thống kê đặt sách online" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="110.0" prefHeight="275.0" prefWidth="900.0">
+               <children>
+                  <TableView fx:id="tbTraTre" prefHeight="275.0" prefWidth="427.0" />
+                  <TableView fx:id="tbDatOnline" prefHeight="275.0" prefWidth="438.0" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

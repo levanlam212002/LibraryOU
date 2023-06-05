@@ -1,0 +1,41 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Mar 13, 2023, 2:44:24 PM
+    Author     : HP
+*/
+*{
+    -fx-font-family: tahoma;
+    -fx-font-size: 14;
+}
+BorderPane{
+    -fx-background: MediumAquaMarine;
+}
+Button{
+    -fx-text-Fill: black;
+}
+VBox {
+    -fx-alignment :CENTER;
+    -fx-spacing: 10;
+    -fx-padding: 10; 
+}
+Text.Title{
+    -fx-font-size: 30;
+    -fx-alignment :CENTER;
+    -fx-fill: greenyellow;
+    -fx-font-weight: bold;
+    -fx-stroke: green;
+    -fx-stroke-width:2;
+    -fx-spacing:10;
+    -fx-padding: 10;
+}
+Text{
+     -fx-font-size: 15;
+    -fx-alignment :CENTER;
+}
+HBox{
+    -fx-spacing:20;
+    -fx-padding: 10;
+}
